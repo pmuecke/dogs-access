@@ -67,7 +67,8 @@ async def register(ctx):
 
     await author.send(f"Retrieving your files now... 🕵️ 🗃️")
 
-    
+    dog_discord = None
+    dog_id_owner = None
 
     try:
 
@@ -104,9 +105,12 @@ async def register(ctx):
         dogs = json.load(file)
     
     dog_id = dog_id_owner
-    old_owner = dogs.get(str(dog_id), None)
+    if dog_id is not None:
+        old_owner = dogs.get(str(dog_id), None)
+    else:
+        old_owner = None
 
-    dog_owner = "Secret Dog Owner"
+    dog_owner = "🦮 Secret Dog Owner"
     roles = [dog_owner]
 
     if old_owner is None:
