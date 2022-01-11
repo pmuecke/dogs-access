@@ -1,3 +1,11 @@
+# Config
+config/
+config.txt
+
+# Data
+data/
+data/dogs.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +135,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# VSCode
+.vscode/
